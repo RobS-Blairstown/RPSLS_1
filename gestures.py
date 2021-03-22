@@ -32,3 +32,7 @@ class Spock(Player):
     def __init__(self):
         self.spock_beats = ['Scissors', 'Rock']
         super().__init__()
+
+
+# display gesture options class
+# assign a gesture to a player class
