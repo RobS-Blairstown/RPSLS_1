@@ -5,6 +5,14 @@ class Gestures:
         self.gesture = []
         self.player_gesture = ''
 
+class Rock(Gestures):
+    def rock(self):
+        self.rock_beats = ['Scissors', 'Lizard']
+        super().__init__()
 
-    def Rock(Gestures):
-        self.
+class Paper(Gestures):
+    def paper(self):
+        self.scissor_beats = ['Rock', 'Spock']
+        super().__init__()
+
+class
