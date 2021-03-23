@@ -1,7 +1,7 @@
 
 
 class Player:
-    def __init__(self, gesture):
+    def __init__(self):
         self.gesture = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
 
 
@@ -40,12 +40,19 @@ class DisplayGesture(Player):
     def __init__(self):
         self.display_gesture = input(f'{Player.gesture}')
         return self.display_gesture
+    super().__init__()
 
 
 # assign a gesture to a player class
 class AssignGesture(DisplayGesture):
     def __init__(self, assign_gesture):
         self.display_gesture = assign_gesture
+    super().__init__()
 
 
+#create AI class
+
+class AI(Player):
+    def __init__(self, ai_gesture):
+        self.gesture = ai_gesture
 
