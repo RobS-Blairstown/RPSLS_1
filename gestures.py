@@ -2,58 +2,47 @@
 
 class Player:
     def __init__(self):
-        self.gesture = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock']
-        self.player1 = input(f'Do you want {Rock}, {Paper}, {Scissors}, {Lizard}, {Spock}?')
-        self.player2 = input(f'Do you want {Rock}, {Paper}, {Scissors}, {Lizard}, {Spock}?')
+        self.gesture = [Rock(), Paper(), Scissors(), Lizard(), Spock()]
 
-class Rock(Player):
+
+class Rock:
     def __init__(self):
-        self.rock_beats = ['Scissors', 'Lizard']
-        super().__init__()
+        self.name = 'Rock'
+        self.loses_to = ['Paper', 'Spock']
 
 
-class Paper(Player):
+class Paper:
     def __init__(self):
-        self.paper_beats = ['Rock', 'Spock']
-        super().__init__()
+        self.name = 'Paper'
+        self.loses_to = ['Scissors', 'Lizard']
 
 
-class Scissors(Player):
+class Scissors:
     def __init__(self):
-        self.scissor_beats = ['Paper', 'Lizard']
-        super().__init__()
+        self.name = 'Scissors'
+        self.loses_to = ['Rock', 'Spock']
 
 
-class Lizard(Player):
+class Lizard:
     def __init__(self):
-        self.lizard_beats = ['Spock', 'Paper']
-        super().__init__()
+        self.name = 'Lizard'
+        self.loses_to = ['Rock', 'Scissors']
 
 
-class Spock(Player):
+class Spock:
     def __init__(self):
-        self.spock_beats = ['Scissors', 'Rock']
-        super().__init__()
+        self.name = 'Spock'
+        self.loses_to = ['Lizard', 'Paper']
 #
 
 # display gesture options class
-class DisplayGesture(Player):
-    def __init__(self):
-        self.display_gesture = input(f'{Player.gesture}')
-        return self.display_gesture
-    super().__init__()
-
-
-# assign a gesture to a player class
-class AssignGesture(DisplayGesture):
-    def __init__(self, assign_gesture):
-        self.display_gesture = assign_gesture
-    super().__init__()
-
+class Human(Player):
+    def __init__(self, chosen_gesture):
+        self.chosen_gesture = ''
 
 #create AI class
 
 class AI(Player):
-    def __init__(self, ai_gesture):
-        self.gesture = ai_gesture
+    def __init__(self, chosen_gesture):
+        self.chosen_gesture = ''
 
