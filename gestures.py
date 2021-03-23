@@ -39,8 +39,13 @@ class Player:
 class DisplayGesture(Player):
     def __init__(self):
         self.display_gesture = input(f'{Player.gesture}')
+        return self.display_gesture
 
 
 # assign a gesture to a player class
+class AssignGesture(DisplayGesture):
+    def __init__(self, assign_gesture):
+        self.display_gesture = assign_gesture
 
-class 
+
+
